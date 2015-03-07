@@ -33,7 +33,7 @@ unzip(fileName)
 print('Unzip data file')
 
 ## Get features
-featres <- read.table(paste(unzipPath,'features.txt',sep='/'))
+features <- read.table(paste(unzipPath,'features.txt',sep='/'))
 print('Load features')
 
 ## Get test data
@@ -73,9 +73,9 @@ requiredDat$activity <- factor(requiredDat$activity, levels=activity$V1,labels=a
 ## done in step3
 
 ## 5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
-requireDat2 <- requiredDat
+requiredDat2 <- requiredDat
 myFun <- function(x){colMeans(x[,-c(1,dim(x)[2])])}  ## col[dim(x)[2]] is activity
-requireDat2 <- ddply(requireDat2,.(ID,activity),myFun)
+requiredDat2 <- ddply(requiredDat2,.(ID,activity),myFun)
 
 ## save result
 write.csv(requiredDat,paste(myResDir,'result1.csv',sep = '/'))
