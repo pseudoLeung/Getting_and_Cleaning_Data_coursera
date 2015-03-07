@@ -37,12 +37,12 @@ Then you may see：
 Package<code>dpylr</code> is required in this script. So if not found, it will be downloaded and installed. 
 It will download data required(<https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>) on first run and stored as <code>UCI_HAR_Dataset.zip</code>. The file will be unzipped to analysis. After analysis, the folder named <code>result</code> will be created containg results. The results are stored in two files:
 
-    result1.csv, 10299 rows and 81 cols
-    result2.csv, 180 rows and 81 cols
+    result1.txt, 10299 rows and 81 cols
+    result2.txt, 180 rows and 81 cols
     
 #### Use and/or show result
 
-    requiredDat <- read.csv('result/result1.csv')
-    requiredDat2 <- read.csv('result/result2.csv')
+    requiredDat <- read.table('result/result1.txt')
+    requiredDat2 <- read.table('result/result2.txt')
     View(requiredDat)
     View(requiredDat2)
