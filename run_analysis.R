@@ -78,8 +78,8 @@ myFun <- function(x){colMeans(x[,-c(1,dim(x)[2])])}  ## col[dim(x)[2]] is activi
 requiredDat2 <- ddply(requiredDat2,.(ID,activity),myFun)
 
 ## save result
-write.csv(requiredDat,paste(myResDir,'result1.csv',sep = '/'))
-write.csv(requiredDat2,paste(myResDir,'result2.csv',sep = '/'))
+write.table(requiredDat,paste(myResDir,'result1.txt',sep = '/'),row.name=FALSE)
+write.table(requiredDat2,paste(myResDir,'result1.txt',sep = '/'),row.name=FALSE)
 print('Save result')
 print('All done')
 ## Good luck!
