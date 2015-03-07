@@ -79,7 +79,7 @@ requiredDat2 <- ddply(requiredDat2,.(ID,activity),myFun)
 
 ## save result
 write.table(requiredDat,paste(myResDir,'result1.txt',sep = '/'),row.name=FALSE)
-write.table(requiredDat2,paste(myResDir,'result1.txt',sep = '/'),row.name=FALSE)
+write.table(requiredDat2,paste(myResDir,'result2.txt',sep = '/'),row.name=FALSE)
 print('Save result')
 print('All done')
 ## Good luck!
